@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+}
+.form {
+    display: block;
+    padding: 20px 30px;
+    min-height: 100vh;
+}
+.form .title {
+    font-size: 30px;
+    font-weight: 900;
+    color: #1566ed;
+}
+.form .container {
+    display: flex;
+    padding: 15px;
+    width: 90%;
+    margin: 30px auto;
+    justify-content: space-between;
+    gap: 20px;
+}
+@media (max-width:900px) {
+    .form {
+        padding: 20px 10px;
+    }
+    .form .container {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+@media (max-width:670px) {
+    .form .container {
+        width: 98%;
+        padding: 0;
+    }
+}
+form {
+    background: #f3f1f1;
+    flex-basis: 50%;
+    padding: 20px 15px;
+}
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+@media (max-width:550px) {
+    .input-box {
+        display: block;
+    }
+}
+.input-box .detail {
+    width: 110px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.input-box input {
+    height: 40px;
+    width: calc(100% - 120px);
+    text-transform: capitalize;
+    border-radius: 5px;
+    border: 2px solid #1566ed;
+    border-bottom: rgb(66, 175, 66);
+    outline: none;
+    transition: 0.3s;
+
+}
+@media (max-width:550px) {
+    .input-box .detail {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .input-box input {
+        width: 100%;
+    }
+}
+.input-box input:focus,
+.input-box input:valid {
+    border-color: rgb(66, 175, 66);
+}
+.input-box select {
+    height: 40px;
+    width: calc(100% - 120px);
+    text-transform: capitalize;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #1566ed;
+    border-bottom: none;
+}
+@media (max-width:550px) {
+    .input-box select {
+        width: 100%;
+    }
+}
+.gender-box {
+    width: 100%;
+}
+.gender-box .gender-title {
+    font-size: 18px;
+    font-weight: bolder;
+}
+.gender-box .gender {
+    font-size: 15px;
+    font-weight: 500;
+}
+.category {
+    display: flex;
+    width: 100%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+.category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 25px;
+}
+.category label .dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid #49b45b;
+    transition: 0.3s;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+    background: #1566ed;
+    border-color: #c5c5c5;
+}
+form .button {
+    height: 45px;
+    margin: 35px 0;
+}
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #1566ed;
+}
+form .button input:hover {
+    background: #59b669;
+}
